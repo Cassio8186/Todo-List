@@ -24,3 +24,6 @@ $("input[type='text']").on("keypress", function(event) {
     }
   }
 });
+$(".fa-plus").click(function() {
+  $("input[type='text']").fadeToggle();
+});
