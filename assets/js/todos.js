@@ -1,3 +1,6 @@
+$(document).ready(function() {
+  $("ul li span").append('<i class="far fa-trash-alt"></i>');
+});
 //Check off specific Todos by clicking
 $("ul").on("click", "li", function() {
   $(this).toggleClass("completed");
@@ -15,7 +18,7 @@ $("input[type='text']").on("keypress", function(event) {
   if (event.which === 13) {
     if ($(this).val() != "") {
       var todoText = $(this).val();
-      var span = "<span>X</span>";
+      var span = '<span><i class="far fa-trash-alt"></i></span>';
       $("ul").append(`<li>${span} ${todoText}</li>`);
       $("input[type='text']").val("");
     }
